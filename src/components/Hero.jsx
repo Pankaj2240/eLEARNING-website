@@ -4,16 +4,16 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 const Hero = () => {
   const slides = [
     {
-      image: "https://themewagon.github.io/elearning/img/carousel-1.jpg",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop",
       tagline: "BEST ONLINE COURSES",
       heading: "Get Educated Online From Your Home",
-      description: "Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.",
+      description: "Upskill your career with industry-recognized web development, data science, and programming courses taught by expert professionals.",
     },
     {
-      image: "https://themewagon.github.io/elearning/img/carousel-2.jpg",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop",
       tagline: "ELEVATE YOUR KNOWLEDGE",
       heading: "Shape Your Future with Expert Tutors",
-      description: "Sea sanctus eirmod elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum.",
+      description: "Build robust full-stack projects, master data structures & algorithms, and step into high-paying tech roles with confidence.",
     },
   ];
 
@@ -22,7 +22,6 @@ const Hero = () => {
   const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % slides.length);
   const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
-  // Automatic slide functionality every 5 seconds
   useEffect(() => {
     const slideInterval = setInterval(nextSlide, 5000);
     return () => clearInterval(slideInterval);
@@ -41,16 +40,16 @@ const Hero = () => {
           <p className="text-gray-300 text-base leading-relaxed font-light">{description}</p>
 
           <div className="flex items-center space-x-4 pt-2">
-            <button className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-3.5 transition-colors duration-200 cursor-pointer">Read More</button>
-            <button className="bg-white hover:bg-gray-100 text-slate-900 font-semibold px-8 py-3.5 transition-colors duration-200 cursor-pointer">Join Now</button>
+            <button className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-3.5 transition-colors duration-200 cursor-pointer rounded shadow-sm">Read More</button>
+            <button className="bg-white hover:bg-gray-100 text-slate-900 font-semibold px-8 py-3.5 transition-colors duration-200 cursor-pointer rounded shadow-sm">Join Now</button>
           </div>
         </div>
 
         <div className="flex flex-col space-y-2">
-          <button onClick={nextSlide} className="border border-white/40 hover:bg-cyan-500 hover:border-cyan-500 text-white p-3 transition-all duration-200 cursor-pointer" aria-label="Next slide">
+          <button onClick={nextSlide} className="border border-white/40 hover:bg-cyan-500 hover:border-cyan-500 text-white p-3 transition-all duration-200 cursor-pointer rounded" aria-label="Next slide">
             <MdKeyboardArrowRight />
           </button>
-          <button onClick={prevSlide} className="border border-white/40 hover:bg-cyan-500 hover:border-cyan-500 text-white p-3 transition-all duration-200 cursor-pointer" aria-label="Previous slide">
+          <button onClick={prevSlide} className="border border-white/40 hover:bg-cyan-500 hover:border-cyan-500 text-white p-3 transition-all duration-200 cursor-pointer rounded" aria-label="Previous slide">
             <MdKeyboardArrowLeft />
           </button>
         </div>

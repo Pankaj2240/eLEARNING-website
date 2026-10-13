@@ -8,10 +8,10 @@ const Instructors = () => {
   ];
 
   const instructorList = [
-    { name: "Instructor Name", role: "Designation", img: "https://themewagon.github.io/elearning/img/team-1.jpg" },
-    { name: "Instructor Name", role: "Designation", img: "https://themewagon.github.io/elearning/img/team-2.jpg" },
-    { name: "Instructor Name", role: "Designation", img: "https://themewagon.github.io/elearning/img/team-3.jpg" },
-    { name: "Instructor Name", role: "Designation", img: "https://themewagon.github.io/elearning/img/team-4.jpg" },
+    { name: "Alex Turner", role: "Full Stack Expert", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" },
+    { name: "Sarah Jenkins", role: "UI/UX Lead", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop" },
+    { name: "Michael Chang", role: "Data Scientist", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop" },
+    { name: "Emily Watson", role: "C++ & DSA Mentor", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" },
   ];
 
   return (
@@ -23,20 +23,21 @@ const Instructors = () => {
 
         <div className="flex justify-between space-x-6 w-full">
           {instructorList.map(({ name, role, img }, idx) => (
-            <div key={idx} className="w-1/4 flex flex-col items-center bg-slate-50">
-              <div className="relative w-full h-72 flex">
-                <img src={img} alt={`Team ${idx + 1}`} className="w-full h-full object-cover" />
-                <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 flex bg-white p-1.5 shadow-md z-10 space-x-1">
+            <div key={idx} className="w-1/4 flex flex-col items-center bg-slate-50 rounded-lg overflow-hidden border shadow-sm">
+              <div className="relative w-full h-72 flex overflow-visible">
+                <img src={img} alt={name} className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" />
+                {/* Fixed social icons position so they sit cleanly overlapping the bottom edge of the image */}
+                <div className="absolute left-1/2 -translate-x-1/2 bottom-3 flex bg-white px-3 py-1.5 shadow-md z-10 space-x-2 rounded-full border border-gray-100">
                   {socialLinks.map(({ href, icon }, sIdx) => (
-                    <a key={sIdx} href={href} className="p-2 text-white bg-cyan-500 hover:bg-cyan-600 text-xs transition-colors">
+                    <a key={sIdx} href={href} className="p-1.5 text-white bg-cyan-500 hover:bg-cyan-600 text-xs transition-colors rounded-full">
                       {icon}
                     </a>
                   ))}
                 </div>
               </div>
-              <div className="pt-8 pb-6 text-center w-full">
+              <div className="pt-6 pb-6 text-center w-full">
                 <h4 className="font-bold text-slate-900 text-lg">{name}</h4>
-                <p className="text-gray-500 text-xs mt-1">{role}</p>
+                <p className="text-gray-500 text-xs mt-1 font-medium">{role}</p>
               </div>
             </div>
           ))}

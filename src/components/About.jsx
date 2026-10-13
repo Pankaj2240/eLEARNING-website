@@ -11,7 +11,7 @@ const About = () => {
         <>
           <div
             className="relative w-full h-[320px] bg-cover bg-center flex items-center justify-center text-white select-none"
-            style={{ backgroundImage: `url('https://themewagon.github.io/elearning/img/carousel-1.jpg')` }}
+            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop')` }}
           >
             <div className="absolute inset-0 bg-slate-950/75 mix-blend-multiply"></div>
             <div className="relative z-10 text-center space-y-2">
@@ -34,7 +34,11 @@ const About = () => {
       <div className="w-full bg-white py-16 px-8">
         <div className="max-w-7xl mx-auto flex items-stretch space-x-12">
           <div className="w-1/2 flex">
-            <img src="https://themewagon.github.io/elearning/img/about.jpg" alt="About eLearning" className="w-full h-full object-cover shadow-sm object-left" />
+            <img
+              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1000&auto=format&fit=crop"
+              alt="About eLearning"
+              className="w-full h-full object-cover shadow-sm object-center rounded-md"
+            />
           </div>
 
           <div className="w-1/2 flex flex-col justify-center space-y-6">
@@ -49,7 +53,7 @@ const About = () => {
             <h2 className="text-4xl font-semibold text-slate-900">Welcome to eLEARNING</h2>
 
             <p className="text-gray-600 text-sm leading-relaxed font-light">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.
+              Empowering students worldwide with cutting-edge digital skills, expert mentorship, and practical real-world project experience. Shape your career with us today.
             </p>
 
             <div className="pt-4">
